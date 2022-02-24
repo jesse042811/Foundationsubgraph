@@ -7,7 +7,7 @@ type Token @entity {
   name: String!
   createdAtTimestamp: BigInt!
   creator: User!
-  owner: USer!
+  owner: User!
 }
 
 
