@@ -31,6 +31,10 @@ dataSources:
         - name: Token
           file: ./abis/Token.json
       eventHandlers:
+        - event: TokenIFPSPathUpdated(indexed uint256, indexed string, string)
+          handler: handleTokenIPFSPathUpdated
+        - event: Transfer(indexed address, indexed address, indexed uint256)
+          handler: handleTransfer
         - event: Approval(indexed address,indexed address,indexed uint256)
           handler: handleApproval
         - event: ApprovalForAll(indexed address,indexed address,bool)
